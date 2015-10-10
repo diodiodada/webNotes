@@ -1,1 +1,116 @@
-Hello World!
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link href="mystyle.css" rel="stylesheet" type="text/css">
+
+    <title>web notes</title>
+
+</head>
+<body onload="showDialyList()">
+
+    <div class="container">
+        <div class="alert alert-info">
+            <h1 class="text-center text-primary">web记事本</h1>
+        </div>
+
+        <div id="content">
+
+            <div class="text">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">web记事本</div>
+
+                    <table  border="1" class="table table-hover table-bordered mytable" >
+                        <tr align="center">
+                            <td class="text-primary bg-info" >编号</td>
+                            <td class="text-primary bg-info" >标题</td>
+                            <td class="text-primary bg-info" >内容</td>
+                            <td class="text-primary bg-info" >备注</td>
+                            <td class="text-primary bg-info" >编辑</td>
+                        </tr>
+
+                        <tbody id="list" align="center"></tbody>
+
+                    </table>
+                </div>
+
+            </div>
+
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">新建记事</div>
+
+
+                <table class="table table-hover table-bordered">
+                    <tr align="center">
+                        <td>
+                            <span class="glyphicon glyphicon-th-list"></span>
+                            <lable>编号：</lable>
+                        </td>
+                        <td>
+                            <input class="form-control" name="sitename" type="text" id="siteid" placeholder="在此为您的内容赋予一个独一无二的编号吧"/>
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td>
+                            <span class="glyphicon glyphicon-heart"></span>
+                            <lable>标题：</lable>
+                        </td>
+                        <td>
+                            <input class="form-control" name="sitename" type="text" id="sitename" placeholder="为您的内容拟一个标题吧（可为空）"/>
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td>
+                            <span class="glyphicon glyphicon-globe"></span>
+                            <lable>正文：</lable>
+                        </td>
+                        <td>
+                            <textarea class="form-control" name="siteurl"  id="siteurl" rows="18" placeholder="在此输入您的内容吧（可为空）"></textarea>
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td>
+                            <span class="glyphicon glyphicon-edit"></span>
+                            <lable>备注：</lable>
+                        </td>
+                        <td>
+                            <input class="form-control" name="siteurl" type="text" id="sitetext" placeholder="在此输入您的备注（可为空）"/>
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+
+
+
+            <div class="container mybtn">
+                <div class="col-md-6" style="margin-bottom: 8px">
+                    <input class="  btn btn-info btn-lg btn-block " name="按钮" type="button" value="保存" onclick="btnAddDialy()">
+                </div>
+                <div class="col-md-6" style="margin-bottom: 8px">
+                    <input class="  btn btn-info btn-lg btn-block " type="button" id="btnNew" onclick="editDialy()" value="更改">
+                </div>
+            </div>
+
+
+            <div class="resulttext container" >
+                <div class="alert alert-warning" id="pstate"></div>
+            </div>
+
+
+        </div>
+        <div class="foot container">
+
+        </div>
+
+    </div>
+    <script src="webnotes.js" ></script>
+</body>
+</html>
